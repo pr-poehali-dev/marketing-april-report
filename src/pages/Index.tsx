@@ -202,7 +202,7 @@ function Shell({ children, n, total, note }: { children: React.ReactNode; n: num
 // ─── SLIDE 1: COVER ───────────────────────────────────────────────────────────
 function S1({ active, n, total }: { active: boolean; n: number; total: number }) {
   return (
-    <Shell n={n} total={total} note="Представьте контекст. Итоги апреля 2024 по департаменту.">
+    <Shell n={n} total={total} note="Представьте контекст. Итоги апреля 2026 по департаменту.">
       <div style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
         {/* Giant bg text */}
         <div style={{ position: "absolute", right: -24, bottom: -20, ...T, fontSize: 240, fontWeight: 700,
@@ -216,7 +216,7 @@ function S1({ active, n, total }: { active: boolean; n: number; total: number })
           {/* Eyebrow */}
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
             <div style={{ height: 1, width: 40, background: "linear-gradient(90deg, transparent, #3B82F6)" }} />
-            <span style={{ ...M, fontSize: 9, color: C.blue, letterSpacing: 4 }}>DIGITAL MARKETING · АПРЕЛЬ 2024</span>
+            <span style={{ ...M, fontSize: 9, color: C.blue, letterSpacing: 4 }}>DIGITAL MARKETING · АПРЕЛЬ 2026</span>
           </div>
 
           <h1 style={{ ...T, fontSize: 68, fontWeight: 600, color: C.white, lineHeight: 1.0, margin: "0 0 6px", letterSpacing: -1 }}>
@@ -249,7 +249,7 @@ function S1({ active, n, total }: { active: boolean; n: number; total: number })
           {/* Meta row */}
           <div style={{ display: "flex", gap: 48, marginTop: 40, paddingTop: 28,
             borderTop: `1px solid ${C.faint}` }}>
-            {[{ l: "Период", v: "Апрель 2024" }, { l: "Версия", v: "Executive" }, { l: "Доступ", v: "Конфиденциально" }].map(m => (
+            {[{ l: "Период", v: "Апрель 2026" }, { l: "Версия", v: "Executive" }, { l: "Доступ", v: "Конфиденциально" }].map(m => (
               <div key={m.l}>
                 <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 2, marginBottom: 4 }}>{m.l.toUpperCase()}</div>
                 <div style={{ ...T, fontSize: 12, color: C.muted, fontWeight: 400 }}>{m.v}</div>
@@ -656,7 +656,7 @@ function S9({ active, n, total }: { active: boolean; n: number; total: number })
     <Shell n={n} total={total} note="Дорожная карта Q2. Фокус: эффективность, а не только объём.">
       <Label text="Дорожная карта Q2" />
       <h2 style={{ ...T, fontSize: 36, color: C.white, fontWeight: 500, margin: "0 0 24px", letterSpacing: -0.5 }}>
-        Май – Июль 2024
+        Май – Июль 2026
       </h2>
 
       <div style={{ display: "flex", gap: 16, marginBottom: 18 }}>
@@ -729,7 +729,7 @@ function S10({ active, n, total }: { active: boolean; n: number; total: number }
           <div style={{ ...T, fontSize: 16, letterSpacing: 4, marginBottom: 48,
             background: `linear-gradient(90deg, ${C.blue}, ${C.cyan})`,
             WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-            АПРЕЛЬ 2024 · EXECUTIVE ОТЧЁТ
+            АПРЕЛЬ 2026 · EXECUTIVE ОТЧЁТ
           </div>
 
           <Glass style={{ display: "inline-flex", gap: 40, padding: "22px 40px",
@@ -814,7 +814,7 @@ export default function Index() {
             fontSize: 9, fontWeight: 800, color: "#fff", ...T }}>AR</div>
           <div style={{ width: 1, height: 14, background: C.faint }} />
           <span style={{ fontSize: 10, color: C.dim, fontFamily: "monospace", letterSpacing: 1 }}>
-            Отчёт департамента · Апрель 2024
+            Отчёт департамента · Апрель 2026
           </span>
         </div>
 
