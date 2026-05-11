@@ -20,10 +20,10 @@ const C = {
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 const KPI = [
-  { label: "SMS Sent",       value: 497013,  unit: "",  color: C.cyan,   glow: "rgba(6,182,212,0.2)"  },
-  { label: "Clicks",         value: 218755,  unit: "",  color: C.blue,   glow: "rgba(59,130,246,0.2)" },
-  { label: "Deposits",       value: 4248,    unit: "",  color: C.teal,   glow: "rgba(20,184,166,0.2)" },
-  { label: "Grandpa Check",  value: 171668,  unit: "",  color: C.purple, glow: "rgba(139,92,246,0.2)" },
+  { label: "SMS Отправлено",  value: 497013,  unit: "",  color: C.cyan,   glow: "rgba(6,182,212,0.2)"  },
+  { label: "Клики",           value: 218755,  unit: "",  color: C.blue,   glow: "rgba(59,130,246,0.2)" },
+  { label: "Депозиты",        value: 4248,    unit: "",  color: C.teal,   glow: "rgba(20,184,166,0.2)" },
+  { label: "Grandpa Check",   value: 171668,  unit: "",  color: C.purple, glow: "rgba(139,92,246,0.2)" },
 ];
 
 const CHANNELS = [
@@ -38,30 +38,30 @@ const SMS_SPLIT = [
   { label: "Grandpa Check",  value: 171668, pct: 34.5, color: C.purple },
   { label: "KakaoTalk",      value: 8581,   pct: 1.7,  color: C.blue   },
   { label: "Botim",          value: 601,    pct: 0.1,  color: C.teal   },
-  { label: "Other",          value: 316163, pct: 63.6, color: C.cyan   },
+  { label: "Прочие",         value: 316163, pct: 63.6, color: C.cyan   },
 ];
 
 const GEO = [
-  { label: "International", value: 137849, pct: 63, color: C.cyan   },
-  { label: "Russia",        value: 80906,  pct: 37, color: C.purple },
+  { label: "Международный", value: 137849, pct: 63, color: C.cyan   },
+  { label: "Россия",         value: 80906,  pct: 37, color: C.purple },
 ];
 
 const FUNNEL_STEPS = [
-  { label: "SMS", value: 497013, color: C.cyan   },
-  { label: "Clicks",   value: 218755, color: C.blue   },
-  { label: "Deposits", value: 4248,   color: C.teal   },
+  { label: "SMS",      value: 497013, color: C.cyan },
+  { label: "Клики",    value: 218755, color: C.blue },
+  { label: "Депозиты", value: 4248,   color: C.teal },
 ];
 
 const CHALLENGES = [
-  { num: "01", title: "CTR Gap",     body: "44% click rate vs industry benchmark 55%",        fix: "A/B test CTA messaging",     kpi: "+15% CTR",   c: C.amber  },
-  { num: "02", title: "CVR Drop",    body: "1.9% click-to-deposit vs target 2.5%",            fix: "Landing page optimisation",  kpi: "+0.5% CVR",  c: C.rose   },
-  { num: "03", title: "GEO Mix",     body: "63% international traffic, lower intent",          fix: "GEO-segmented creatives",    kpi: "+20% RU dep", c: C.purple },
+  { num: "01", title: "CTR Gap",        body: "44% кликов против эталона 55% по отрасли",          fix: "A/B тест CTA-сообщений",           kpi: "+15% CTR",    c: C.amber  },
+  { num: "02", title: "Конверсия",      body: "1.9% клик→депозит против целевых 2.5%",             fix: "Оптимизация лендинга",              kpi: "+0.5% CVR",   c: C.rose   },
+  { num: "03", title: "GEO Mix",        body: "63% трафика — международный, меньший intent",        fix: "GEO-сегментация креативов",         kpi: "+20% RU деп", c: C.purple },
 ];
 
 const ROADMAP = [
-  { q: "MAY",  goals: ["550 000 SMS", "A/B CTA launch"],       c: C.cyan   },
-  { q: "JUN",  goals: ["CTR ≥ 50%",  "Retargeting live"],      c: C.blue   },
-  { q: "JUL",  goals: ["5 000 Dep",  "CPC −10%"],              c: C.teal   },
+  { q: "МАЙ",  goals: ["550 000 SMS", "Запуск A/B CTA"],         c: C.cyan  },
+  { q: "ИЮН",  goals: ["CTR ≥ 50%",   "Ретаргетинг запущен"],   c: C.blue  },
+  { q: "ИЮЛ",  goals: ["5 000 деп.",  "CPC −10%"],               c: C.teal  },
 ];
 
 const SHORT_IDX = [0, 1, 3, 6, 9];
@@ -174,7 +174,7 @@ function Shell({ children, n, total, note }: { children: React.ReactNode; n: num
           fontSize: 8, fontWeight: 800, color: "#fff", letterSpacing: "-0.5px", ...T }}>
           AR
         </div>
-        <span style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3 }}>ANALYTICS</span>
+        <span style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3 }}>АНАЛИТИКА</span>
       </div>
 
       {/* Slide counter */}
@@ -202,32 +202,32 @@ function Shell({ children, n, total, note }: { children: React.ReactNode; n: num
 // ─── SLIDE 1: COVER ───────────────────────────────────────────────────────────
 function S1({ active, n, total }: { active: boolean; n: number; total: number }) {
   return (
-    <Shell n={n} total={total} note="Set context. April 2024 final department results.">
+    <Shell n={n} total={total} note="Представьте контекст. Итоги апреля 2024 по департаменту.">
       <div style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
         {/* Giant bg text */}
         <div style={{ position: "absolute", right: -24, bottom: -20, ...T, fontSize: 240, fontWeight: 700,
           background: "linear-gradient(180deg, rgba(59,130,246,0.06) 0%, transparent 100%)",
           WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
           backgroundClip: "text", userSelect: "none", lineHeight: 1 }}>
-          APR
+          АПР
         </div>
 
         <div style={{ opacity: active ? 1 : 0, transform: active ? "none" : "translateY(28px)", transition: "all 0.9s cubic-bezier(0.16,1,0.3,1)" }}>
           {/* Eyebrow */}
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
             <div style={{ height: 1, width: 40, background: "linear-gradient(90deg, transparent, #3B82F6)" }} />
-            <span style={{ ...M, fontSize: 9, color: C.blue, letterSpacing: 4 }}>DIGITAL MARKETING · APRIL 2024</span>
+            <span style={{ ...M, fontSize: 9, color: C.blue, letterSpacing: 4 }}>DIGITAL MARKETING · АПРЕЛЬ 2024</span>
           </div>
 
           <h1 style={{ ...T, fontSize: 68, fontWeight: 600, color: C.white, lineHeight: 1.0, margin: "0 0 6px", letterSpacing: -1 }}>
-            Department<br />
+            Отчёт<br />
             <span style={{ background: "linear-gradient(135deg, #3B82F6, #06B6D4)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-              Report
+              Департамента
             </span>
           </h1>
 
           <p style={{ fontSize: 13, color: C.muted, margin: "16px 0 36px", maxWidth: 440, lineHeight: 1.6, fontWeight: 300 }}>
-            Executive summary · Performance analytics · Q2 outlook
+            Executive-резюме · Аналитика показателей · Прогноз на Q2
           </p>
 
           {/* Channel pills */}
@@ -235,8 +235,8 @@ function S1({ active, n, total }: { active: boolean; n: number; total: number })
             {[
               { ch: "SMS",       c: C.cyan   },
               { ch: "WhatsApp",  c: C.teal   },
-              { ch: "Clicks",    c: C.blue   },
-              { ch: "Deposits",  c: C.purple },
+              { ch: "Клики",     c: C.blue   },
+              { ch: "Депозиты",  c: C.purple },
             ].map(x => (
               <div key={x.ch} style={{ padding: "6px 18px", borderRadius: 99,
                 background: x.c + "10", border: `1px solid ${x.c}25`,
@@ -249,7 +249,7 @@ function S1({ active, n, total }: { active: boolean; n: number; total: number })
           {/* Meta row */}
           <div style={{ display: "flex", gap: 48, marginTop: 40, paddingTop: 28,
             borderTop: `1px solid ${C.faint}` }}>
-            {[{ l: "Period", v: "April 2024" }, { l: "Version", v: "Executive" }, { l: "Clearance", v: "Confidential" }].map(m => (
+            {[{ l: "Период", v: "Апрель 2024" }, { l: "Версия", v: "Executive" }, { l: "Доступ", v: "Конфиденциально" }].map(m => (
               <div key={m.l}>
                 <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 2, marginBottom: 4 }}>{m.l.toUpperCase()}</div>
                 <div style={{ ...T, fontSize: 12, color: C.muted, fontWeight: 400 }}>{m.v}</div>
@@ -280,10 +280,10 @@ function BigKPI({ label, value, color, glow, active }: { label: string; value: n
 
 function S2({ active, n, total }: { active: boolean; n: number; total: number }) {
   return (
-    <Shell n={n} total={total} note="SMSretail drove 88% of all volume. SMS→Deposit conversion: 0.85%.">
-      <Label text="Executive Summary" />
+    <Shell n={n} total={total} note="SMSretail обеспечил 88% объёма. Конверсия SMS→Депозит: 0.85%.">
+      <Label text="Executive-резюме" />
       <h2 style={{ ...T, fontSize: 36, color: C.white, fontWeight: 500, margin: "0 0 28px", letterSpacing: -0.5 }}>
-        April at a Glance
+        Апрель в цифрах
       </h2>
 
       <div style={{ display: "flex", gap: 14, marginBottom: 20 }}>
@@ -298,10 +298,10 @@ function S2({ active, n, total }: { active: boolean; n: number; total: number })
           <div style={{ width: 32, height: 32, borderRadius: 10, background: "rgba(59,130,246,0.12)",
             display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, flexShrink: 0 }}>⚡</div>
           <div>
-            <div style={{ ...M, fontSize: 8, color: C.blue, letterSpacing: 3, marginBottom: 4 }}>KEY INSIGHT</div>
+            <div style={{ ...M, fontSize: 8, color: C.blue, letterSpacing: 3, marginBottom: 4 }}>КЛЮЧЕВОЙ ВЫВОД</div>
             <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.6 }}>
-              <span style={{ color: C.cyan, fontWeight: 600 }}>SMSretail</span> drove the primary volume — 497k SMS, 218k clicks.
-              End-to-end conversion: <span style={{ color: C.teal, fontWeight: 600 }}>0.85%</span>
+              <span style={{ color: C.cyan, fontWeight: 600 }}>SMSretail</span> обеспечил основной объём — 497К SMS, 218К кликов.
+              Сквозная конверсия: <span style={{ color: C.teal, fontWeight: 600 }}>0.85%</span>
             </div>
           </div>
         </div>
@@ -333,15 +333,15 @@ function Bar({ value, max, color, label, share }: { value: number; max: number; 
 function S3({ active, n, total }: { active: boolean; n: number; total: number }) {
   const totalSMS = CHANNELS.reduce((a, c) => a + c.sms, 0);
   return (
-    <Shell n={n} total={total} note="SMSretail dominates at 68%. WhatsApp and KakaoTalk are emerging growth channels.">
-      <Label text="Channel Overview" />
+    <Shell n={n} total={total} note="SMSretail доминирует — 68%. WhatsApp и KakaoTalk — перспективные каналы роста.">
+      <Label text="Обзор каналов" />
       <h2 style={{ ...T, fontSize: 36, color: C.white, fontWeight: 500, margin: "0 0 24px", letterSpacing: -0.5 }}>
-        Volume by Channel
+        Объём по каналам
       </h2>
 
       <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 16, height: "calc(100% - 100px)" }}>
         <Glass style={{ padding: "24px" }}>
-          <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 18 }}>SMS VOLUME</div>
+          <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 18 }}>ОБЪЁМ SMS</div>
           {CHANNELS.map(ch => <Bar key={ch.name} value={ch.sms} max={CHANNELS[0].sms} color={ch.color} label={ch.name} share={ch.share} />)}
         </Glass>
 
@@ -349,7 +349,7 @@ function S3({ active, n, total }: { active: boolean; n: number; total: number })
           <Glass style={{ flex: 1, padding: "24px", display: "flex", alignItems: "center", gap: 20 }}>
             <Ring segments={CHANNELS.map(c => ({ value: c.sms, color: c.color }))} size={110} />
             <div style={{ flex: 1 }}>
-              <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 12 }}>SHARE</div>
+              <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 12 }}>ДОЛЯ</div>
               {CHANNELS.map(ch => (
                 <div key={ch.name} style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: 6 }}>
                   <div style={{ width: 5, height: 5, borderRadius: "50%", background: ch.color, flexShrink: 0 }} />
@@ -360,7 +360,7 @@ function S3({ active, n, total }: { active: boolean; n: number; total: number })
             </div>
           </Glass>
           <div style={{ display: "flex", gap: 12 }}>
-            {[{ l: "Total SMS", v: fmt(totalSMS), c: C.cyan }, { l: "Channels", v: "5", c: C.blue }].map(k => (
+            {[{ l: "Всего SMS", v: fmt(totalSMS), c: C.cyan }, { l: "Каналов", v: "5", c: C.blue }].map(k => (
               <Glass key={k.l} style={{ flex: 1, padding: "14px 16px" }}>
                 <div style={{ ...T, fontSize: 26, color: k.c, fontWeight: 700, lineHeight: 1 }}>{k.v}</div>
                 <div style={{ ...M, fontSize: 8, color: C.dim, marginTop: 6, letterSpacing: 1 }}>{k.l}</div>
@@ -376,15 +376,15 @@ function S3({ active, n, total }: { active: boolean; n: number; total: number })
 // ─── SLIDE 4: SMSRETAIL DETAIL ────────────────────────────────────────────────
 function S4({ active, n, total }: { active: boolean; n: number; total: number }) {
   return (
-    <Shell n={n} total={total} note="Grandpa Check accounts for 34.5% of total volume — prime optimisation target.">
-      <Label text="SMSretail — Deep Dive" />
+    <Shell n={n} total={total} note="Grandpa Check — 34.5% от общего объёма. Приоритетный сегмент для оптимизации.">
+      <Label text="SMSretail — детальный анализ" />
       <h2 style={{ ...T, fontSize: 36, color: C.white, fontWeight: 500, margin: "0 0 24px", letterSpacing: -0.5 }}>
-        Traffic Breakdown
+        Разбивка трафика
       </h2>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, height: "calc(100% - 105px)" }}>
         <Glass style={{ padding: "26px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-          <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 20 }}>SEGMENT BREAKDOWN</div>
+          <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 20 }}>РАЗБИВКА ПО СЕГМЕНТАМ</div>
           {SMS_SPLIT.map(item => (
             <div key={item.label} style={{ marginBottom: 18 }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 7 }}>
@@ -415,14 +415,14 @@ function S4({ active, n, total }: { active: boolean; n: number; total: number })
           </Glass>
 
           <Glass glow="rgba(6,182,212,0.1)" style={{ padding: "22px 24px" }}>
-            <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 8 }}>DOMINANT CHANNEL</div>
-            <div style={{ ...T, fontSize: 52, color: C.cyan, fontWeight: 700, lineHeight: 1, letterSpacing: -2 }}>497K</div>
-            <div style={{ fontSize: 11, color: C.muted, marginTop: 6 }}>Total SMS via SMSretail</div>
+            <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 8 }}>ЛИДИРУЮЩИЙ КАНАЛ</div>
+            <div style={{ ...T, fontSize: 52, color: C.cyan, fontWeight: 700, lineHeight: 1, letterSpacing: -2 }}>497К</div>
+            <div style={{ fontSize: 11, color: C.muted, marginTop: 6 }}>Всего SMS через SMSretail</div>
             <div style={{ marginTop: 12, display: "inline-flex", alignItems: "center", gap: 6,
               padding: "4px 12px", background: "rgba(6,182,212,0.08)", borderRadius: 99,
               border: "1px solid rgba(6,182,212,0.2)" }}>
               <div style={{ width: 4, height: 4, borderRadius: "50%", background: C.cyan }} />
-              <span style={{ ...M, fontSize: 8, color: C.cyan, letterSpacing: 1 }}>#1 by volume</span>
+              <span style={{ ...M, fontSize: 8, color: C.cyan, letterSpacing: 1 }}>#1 по объёму</span>
             </div>
           </Glass>
         </div>
@@ -439,8 +439,8 @@ function S5({ active, n, total }: { active: boolean; n: number; total: number })
     { name: "Webcom",    total: 206428, grandpa: 83360,  color: C.blue   },
   ];
   return (
-    <Shell n={n} total={total} note="SMSretail outperforms Webcom 2.4× in total volume.">
-      <Label text="Competitive Analysis" />
+    <Shell n={n} total={total} note="SMSretail опережает Webcom в 2.4 раза по общему объёму.">
+      <Label text="Сравнительный анализ" />
       <h2 style={{ ...T, fontSize: 36, color: C.white, fontWeight: 500, margin: "0 0 24px", letterSpacing: -0.5 }}>
         SMSretail  vs  Webcom
       </h2>
@@ -449,7 +449,7 @@ function S5({ active, n, total }: { active: boolean; n: number; total: number })
         {providers.map(p => (
           <Glass key={p.name} glow={`${p.color}18`} style={{ padding: "26px 28px" }}>
             <div style={{ ...M, fontSize: 8, color: p.color, letterSpacing: 3, marginBottom: 20 }}>{p.name.toUpperCase()}</div>
-            {[{ l: "Total SMS", v: p.total }, { l: "Grandpa Check", v: p.grandpa }].map(row => (
+            {[{ l: "Всего SMS", v: p.total }, { l: "Grandpa Check", v: p.grandpa }].map(row => (
               <div key={row.l} style={{ marginBottom: 18 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
                   <span style={{ fontSize: 10, color: C.muted }}>{row.l}</span>
@@ -469,9 +469,9 @@ function S5({ active, n, total }: { active: boolean; n: number; total: number })
 
       <div style={{ display: "flex", gap: 14 }}>
         {[
-          { l: "Volume delta",   v: "+290 585", c: C.cyan   },
-          { l: "Grandpa delta",  v: "+88 308",  c: C.purple },
-          { l: "Efficiency",     v: "2.4×",     c: C.teal   },
+          { l: "Разница объёма",   v: "+290 585", c: C.cyan   },
+          { l: "Разница Grandpa",  v: "+88 308",  c: C.purple },
+          { l: "Эффективность",    v: "2.4×",     c: C.teal   },
         ].map(d => (
           <Glass key={d.l} style={{ flex: 1, padding: "14px 18px" }}>
             <div style={{ ...T, fontSize: 28, color: d.c, fontWeight: 700 }}>{d.v}</div>
@@ -486,21 +486,21 @@ function S5({ active, n, total }: { active: boolean; n: number; total: number })
 // ─── SLIDE 6: CLICK GEO ───────────────────────────────────────────────────────
 function S6({ active, n, total }: { active: boolean; n: number; total: number }) {
   return (
-    <Shell n={n} total={total} note="International traffic exceeded Russia by 56 943 clicks. Localisation is key.">
-      <Label text="Click Analytics" />
+    <Shell n={n} total={total} note="Международный трафик превысил российский на 56 943 клика. Ключ — локализация.">
+      <Label text="Аналитика кликов" />
       <h2 style={{ ...T, fontSize: 36, color: C.white, fontWeight: 500, margin: "0 0 24px", letterSpacing: -0.5 }}>
-        218 755 Clicks — Geographic Split
+        218 755 кликов — география
       </h2>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, height: "calc(100% - 110px)" }}>
         {/* Left */}
         <Glass style={{ padding: "28px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
           <div>
-            <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 16 }}>TOTAL</div>
+            <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 16 }}>ИТОГО</div>
             <div style={{ ...T, fontSize: 64, fontWeight: 700, color: C.cyan, lineHeight: 1, letterSpacing: -3, marginBottom: 6 }}>
               218 755
             </div>
-            <div style={{ fontSize: 11, color: C.muted }}>clicks across all geos</div>
+            <div style={{ fontSize: 11, color: C.muted }}>кликов по всем регионам</div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {GEO.map(g => (
@@ -536,7 +536,7 @@ function S6({ active, n, total }: { active: boolean; n: number; total: number })
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
               <span style={{ fontSize: 12 }}>💡</span>
               <span style={{ fontSize: 10, color: C.muted, lineHeight: 1.5 }}>
-                International exceeded Russia by <strong style={{ color: C.cyan }}>56 943 clicks</strong>
+                Международный трафик превысил РФ на <strong style={{ color: C.cyan }}>56 943 клика</strong>
               </span>
             </div>
           </Glass>
@@ -553,10 +553,10 @@ function S7({ active, n, total }: { active: boolean; n: number; total: number })
   const e2e   = ((4248 / 497013) * 100).toFixed(3);
 
   return (
-    <Shell n={n} total={total} note="End-to-end 0.854%. Target for May: 1.0% via landing optimisation.">
-      <Label text="Conversion Funnel" />
+    <Shell n={n} total={total} note="Сквозная конверсия 0.854%. Цель на май: 1.0% через оптимизацию лендинга.">
+      <Label text="Воронка конверсии" />
       <h2 style={{ ...T, fontSize: 36, color: C.white, fontWeight: 500, margin: "0 0 30px", letterSpacing: -0.5 }}>
-        SMS → Clicks → Deposits
+        SMS → Клики → Депозиты
       </h2>
 
       {/* Visual funnel */}
@@ -596,9 +596,9 @@ function S7({ active, n, total }: { active: boolean; n: number; total: number })
       {/* Rate cards */}
       <div style={{ display: "flex", gap: 14 }}>
         {[
-          { label: "Click-Through Rate",  value: ctr + "%", sub: "SMS → Click",   color: C.blue,   glow: "rgba(59,130,246,0.15)" },
-          { label: "Conversion Rate",      value: cvr + "%", sub: "Click → Dep",   color: C.teal,   glow: "rgba(20,184,166,0.15)" },
-          { label: "End-to-End Rate",      value: e2e + "%", sub: "SMS → Deposit", color: C.purple, glow: "rgba(139,92,246,0.15)" },
+          { label: "Кликабельность",    value: ctr + "%", sub: "SMS → Клик",     color: C.blue,   glow: "rgba(59,130,246,0.15)" },
+          { label: "Конверсия",         value: cvr + "%", sub: "Клик → Деп",    color: C.teal,   glow: "rgba(20,184,166,0.15)" },
+          { label: "Сквозная ставка",   value: e2e + "%", sub: "SMS → Депозит", color: C.purple, glow: "rgba(139,92,246,0.15)" },
         ].map(r => (
           <Glass key={r.label} glow={r.glow} style={{ flex: 1, padding: "20px 22px", textAlign: "center" }}>
             <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 8 }}>{r.label.toUpperCase()}</div>
@@ -614,10 +614,10 @@ function S7({ active, n, total }: { active: boolean; n: number; total: number })
 // ─── SLIDE 8: CHALLENGES ──────────────────────────────────────────────────────
 function S8({ active, n, total }: { active: boolean; n: number; total: number }) {
   return (
-    <Shell n={n} total={total} note="Three priorities: CTR gap, CVR improvement, GEO segmentation.">
-      <Label text="Challenges & Optimisations" />
+    <Shell n={n} total={total} note="Три приоритета: CTR, конверсия, GEO-сегментация.">
+      <Label text="Задачи и оптимизации" />
       <h2 style={{ ...T, fontSize: 36, color: C.white, fontWeight: 500, margin: "0 0 24px", letterSpacing: -0.5 }}>
-        Problem · Solution · Impact
+        Проблема · Решение · Результат
       </h2>
       <div style={{ display: "flex", gap: 16, height: "calc(100% - 108px)" }}>
         {CHALLENGES.map(ch => (
@@ -628,19 +628,19 @@ function S8({ active, n, total }: { active: boolean; n: number; total: number })
             <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 16 }}>
               <div style={{ padding: "12px 14px", background: "rgba(255,255,255,0.02)", borderRadius: 12,
                 border: "1px solid rgba(255,255,255,0.04)" }}>
-                <div style={{ ...M, fontSize: 7, color: C.dim, letterSpacing: 2, marginBottom: 6 }}>PROBLEM</div>
+                <div style={{ ...M, fontSize: 7, color: C.dim, letterSpacing: 2, marginBottom: 6 }}>ПРОБЛЕМА</div>
                 <div style={{ fontSize: 11, color: C.muted, lineHeight: 1.6 }}>{ch.body}</div>
               </div>
               <div style={{ padding: "12px 14px", background: `${ch.c}06`, borderRadius: 12,
                 border: `1px solid ${ch.c}18` }}>
-                <div style={{ ...M, fontSize: 7, color: ch.c, letterSpacing: 2, marginBottom: 6 }}>SOLUTION</div>
+                <div style={{ ...M, fontSize: 7, color: ch.c, letterSpacing: 2, marginBottom: 6 }}>РЕШЕНИЕ</div>
                 <div style={{ fontSize: 11, color: C.muted, lineHeight: 1.6 }}>{ch.fix}</div>
               </div>
             </div>
 
             <div style={{ marginTop: 20, padding: "14px", background: `${ch.c}10`,
               borderRadius: 14, border: `1px solid ${ch.c}22`, textAlign: "center" }}>
-              <div style={{ ...M, fontSize: 7, color: C.dim, letterSpacing: 2, marginBottom: 4 }}>EXPECTED IMPACT</div>
+              <div style={{ ...M, fontSize: 7, color: C.dim, letterSpacing: 2, marginBottom: 4 }}>ОЖИДАЕМЫЙ ЭФФЕКТ</div>
               <div style={{ ...T, fontSize: 26, color: ch.c, fontWeight: 700 }}>{ch.kpi}</div>
             </div>
           </Glass>
@@ -653,10 +653,10 @@ function S8({ active, n, total }: { active: boolean; n: number; total: number })
 // ─── SLIDE 9: ROADMAP ─────────────────────────────────────────────────────────
 function S9({ active, n, total }: { active: boolean; n: number; total: number }) {
   return (
-    <Shell n={n} total={total} note="Q2 roadmap. Focus: scale efficiency, not just volume.">
-      <Label text="Q2 Roadmap" />
+    <Shell n={n} total={total} note="Дорожная карта Q2. Фокус: эффективность, а не только объём.">
+      <Label text="Дорожная карта Q2" />
       <h2 style={{ ...T, fontSize: 36, color: C.white, fontWeight: 500, margin: "0 0 24px", letterSpacing: -0.5 }}>
-        May – July 2024
+        Май – Июль 2024
       </h2>
 
       <div style={{ display: "flex", gap: 16, marginBottom: 18 }}>
@@ -687,10 +687,10 @@ function S9({ active, n, total }: { active: boolean; n: number; total: number })
 
       <div style={{ display: "flex", gap: 14 }}>
         {[
-          { l: "SMS Target",     v: "550 000", c: C.cyan   },
-          { l: "CTR Target",     v: "≥50%",    c: C.blue   },
-          { l: "Deposit Target", v: "5 000+",  c: C.teal   },
-          { l: "CPC Reduction",  v: "−10%",    c: C.purple },
+          { l: "Цель SMS",      v: "550 000", c: C.cyan   },
+          { l: "Цель CTR",      v: "≥50%",    c: C.blue   },
+          { l: "Цель Депозиты", v: "5 000+",  c: C.teal   },
+          { l: "Снижение CPC",  v: "−10%",    c: C.purple },
         ].map(t => (
           <Glass key={t.l} style={{ flex: 1, padding: "14px 16px", textAlign: "center" }}>
             <div style={{ ...T, fontSize: 24, color: t.c, fontWeight: 700 }}>{t.v}</div>
@@ -717,19 +717,19 @@ function S10({ active, n, total }: { active: boolean; n: number; total: number }
           transition: "all 1s cubic-bezier(0.16,1,0.3,1)", position: "relative" }}>
 
           <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 4, textTransform: "uppercase", marginBottom: 20 }}>
-            Digital Marketing Department
+            Департамент Digital Marketing
           </div>
 
           <h1 style={{ ...T, fontSize: 80, fontWeight: 700, lineHeight: 1, marginBottom: 10,
             background: `linear-gradient(135deg, ${C.white} 40%, ${C.muted} 100%)`,
             WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-            Questions?
+            Вопросы?
           </h1>
 
           <div style={{ ...T, fontSize: 16, letterSpacing: 4, marginBottom: 48,
             background: `linear-gradient(90deg, ${C.blue}, ${C.cyan})`,
             WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-            APRIL 2024 · EXECUTIVE REPORT
+            АПРЕЛЬ 2024 · EXECUTIVE ОТЧЁТ
           </div>
 
           <Glass style={{ display: "inline-flex", gap: 40, padding: "22px 40px",
@@ -737,7 +737,7 @@ function S10({ active, n, total }: { active: boolean; n: number; total: number }
             {[
               { icon: "✉", l: "Email",     v: "dept@company.com"       },
               { icon: "⚡", l: "Telegram",  v: "@analytics_dept"         },
-              { icon: "◉", l: "Dashboard", v: "analytics.company.com"   },
+              { icon: "◉", l: "Дашборд",   v: "analytics.company.com"  },
             ].map(c => (
               <div key={c.l} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: 16, marginBottom: 6 }}>{c.icon}</div>
@@ -814,7 +814,7 @@ export default function Index() {
             fontSize: 9, fontWeight: 800, color: "#fff", ...T }}>AR</div>
           <div style={{ width: 1, height: 14, background: C.faint }} />
           <span style={{ fontSize: 10, color: C.dim, fontFamily: "monospace", letterSpacing: 1 }}>
-            Department Report · April 2024
+            Отчёт департамента · Апрель 2024
           </span>
         </div>
 
@@ -829,7 +829,7 @@ export default function Index() {
                 fontFamily: "monospace", letterSpacing: 2, fontWeight: mode === m ? 700 : 400,
                 transition: "all 0.2s",
               }}>
-                {m === "full" ? "10 SLIDES" : "5 SLIDES"}
+                {m === "full" ? "10 СЛАЙДОВ" : "5 СЛАЙДОВ"}
               </button>
             ))}
           </div>
@@ -895,10 +895,10 @@ export default function Index() {
       <div style={{ height: 36, background: "rgba(8,12,20,0.9)", borderTop: `1px solid ${C.faint}`,
         padding: "0 28px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <span style={{ fontFamily: "monospace", fontSize: 8, color: "#0F172A", letterSpacing: 3 }}>
-          CONFIDENTIAL · INTERNAL USE ONLY
+          КОНФИДЕНЦИАЛЬНО · ТОЛЬКО ДЛЯ ВНУТРЕННЕГО ИСПОЛЬЗОВАНИЯ
         </span>
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <span style={{ fontFamily: "monospace", fontSize: 8, color: C.faint }}>← → to navigate</span>
+          <span style={{ fontFamily: "monospace", fontSize: 8, color: C.faint }}>← → навигация</span>
           <span style={{ ...M, fontSize: 9, color: C.dim, letterSpacing: 3 }}>
             {String(cur + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
           </span>
