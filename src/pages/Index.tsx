@@ -167,14 +167,21 @@ function Shell({ children, n, total, note }: { children: React.ReactNode; n: num
         background: "linear-gradient(90deg, transparent, rgba(59,130,246,0.4) 30%, rgba(6,182,212,0.4) 70%, transparent)" }} />
 
       {/* Logo */}
-      <div style={{ position: "absolute", top: 20, left: 28, display: "flex", alignItems: "center", gap: 8 }}>
-        <div style={{ width: 20, height: 20, borderRadius: 6,
-          background: "linear-gradient(135deg, #3B82F6, #06B6D4)",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          fontSize: 8, fontWeight: 800, color: "#fff", letterSpacing: "-0.5px", ...T }}>
-          AR
-        </div>
-        <span style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3 }}>АНАЛИТИКА</span>
+      <div style={{ position: "absolute", top: 14, left: 22, display: "flex", alignItems: "center", gap: 0 }}>
+        <img
+          src="https://cdn.poehali.dev/projects/afffc50d-ae59-4938-be8a-6f7792d412c4/bucket/e8db726b-f803-474b-8768-b5938efba94a.jpg"
+          alt="O3GO TEAM"
+          style={{
+            height: 32,
+            width: "auto",
+            opacity: 0.18,
+            filter: "grayscale(100%) brightness(2.5) contrast(0.8)",
+            mixBlendMode: "screen",
+            borderRadius: 4,
+            userSelect: "none",
+            pointerEvents: "none",
+          }}
+        />
       </div>
 
       {/* Slide counter */}
@@ -808,10 +815,18 @@ export default function Index() {
 
         {/* Logo */}
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <div style={{ width: 22, height: 22, borderRadius: 6,
-            background: "linear-gradient(135deg, #3B82F6, #06B6D4)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: 9, fontWeight: 800, color: "#fff", ...T }}>AR</div>
+          <img
+            src="https://cdn.poehali.dev/projects/afffc50d-ae59-4938-be8a-6f7792d412c4/bucket/e8db726b-f803-474b-8768-b5938efba94a.jpg"
+            alt="O3GO TEAM"
+            style={{
+              height: 26,
+              width: "auto",
+              opacity: 0.55,
+              filter: "grayscale(100%) brightness(2.2) contrast(0.9)",
+              mixBlendMode: "screen",
+              borderRadius: 3,
+            }}
+          />
           <div style={{ width: 1, height: 14, background: C.faint }} />
           <span style={{ fontSize: 10, color: C.dim, fontFamily: "monospace", letterSpacing: 1 }}>
             Отчёт департамента · Апрель 2026
