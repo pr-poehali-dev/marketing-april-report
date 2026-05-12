@@ -42,7 +42,7 @@ export function S8({ active, n, total }: SlideProps) {
 export function S9({ active, n, total }: SlideProps) {
   return (
     <Shell n={n} total={total} note="Дорожная карта Q2. Фокус: эффективность, а не только объём.">
-      <Label text="Дорожная карта Q2" />
+      <Label text="Цели на 3 месяца" />
       <h2 style={{ ...T, fontSize: 36, color: C.white, fontWeight: 500, margin: "0 0 24px", letterSpacing: -0.5 }}>
         Май – Июль 2026
       </h2>

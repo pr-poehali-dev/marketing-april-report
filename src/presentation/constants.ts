@@ -57,7 +57,6 @@ export const FUNNEL_STEPS = [
 ];
 
 export const CHALLENGES = [
-  { num: "01", title: "CTR Gap",   body: "44% кликов против эталона 55% по отрасли",        fix: "A/B тест CTA-сообщений",   kpi: "+15% CTR",    c: C.amber  },
   { num: "02", title: "Конверсия", body: "1.9% клик→депозит против целевых 2.5%",           fix: "Оптимизация лендинга",     kpi: "+0.5% CVR",   c: C.rose   },
   { num: "03", title: "GEO Mix",   body: "63% трафика — международный, меньший intent",      fix: "GEO-сегментация креативов", kpi: "+20% RU деп", c: C.purple },
 ];
