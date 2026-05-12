@@ -34,7 +34,6 @@ export const KPI = [
 export const CHANNELS = [
   { name: "SMSretail", sms: 497013, share: 68.3, color: C.cyan   },
   { name: "Webcom",    sms: 206428, share: 28.4, color: C.blue   },
-  { name: "WhatsApp",  sms: 12400,  share: 1.7,  color: C.teal   },
   { name: "KakaoTalk", sms: 8581,   share: 1.2,  color: C.purple },
   { name: "Botim",     sms: 601,    share: 0.1,  color: C.rose   },
 ];
