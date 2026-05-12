@@ -32,7 +32,7 @@ export const KPI = [
 ];
 
 export const CHANNELS = [
-  { name: "SmsSpam",   sms: 497013, share: 68.3, color: C.cyan   },
+  { name: "Retail-wa", sms: 497013, share: 68.3, color: C.cyan   },
   { name: "Webcom",    sms: 206428, share: 28.4, color: C.blue   },
   { name: "KakaoTalk", sms: 8581,   share: 1.2,  color: C.purple },
   { name: "Botim",     sms: 601,    share: 0.1,  color: C.rose   },
