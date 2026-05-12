@@ -57,8 +57,8 @@ export const FUNNEL_STEPS = [
 ];
 
 export const CHALLENGES = [
-  { num: "02", title: "Конверсия", body: "1.9% клик→депозит против целевых 2.5%",           fix: "Оптимизация лендинга",     kpi: "+0.5% CVR",   c: C.rose   },
-  { num: "03", title: "GEO Mix",   body: "63% трафика — международный, меньший intent",      fix: "GEO-сегментация креативов", kpi: "+20% RU деп", c: C.purple },
+  { num: "01", title: "Конверсия", body: "2-3% кликов против целевых 5-7%",                   fix: "Увеличение разных Geo баз и более живых баз", kpi: "+0.5% CVR",   c: C.rose   },
+  { num: "02", title: "GEO Mix",   body: "63% трафика — международный, меньший intent",      fix: "GEO-сегментация креативов", kpi: "+20% RU деп", c: C.purple },
 ];
 
 export const ROADMAP = [
