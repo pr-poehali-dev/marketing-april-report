@@ -63,7 +63,7 @@ export const CHALLENGES = [
 
 export const ROADMAP = [
   { q: "МАЙ", goals: ["550 000 SMS", "Запуск A/B CTA"],       c: C.cyan  },
-  { q: "ИЮН", goals: ["CTR ≥ 50%",  "Ретаргетинг запущен"],  c: C.blue  },
+  { q: "ИЮН", goals: ["Увеличение кликов до 7-8%", "Увеличение живых баз и поднятие доставки"],  c: C.blue  },
   { q: "ИЮЛ", goals: ["5 000 деп.", "CPC −10%"],              c: C.teal  },
 ];
 
