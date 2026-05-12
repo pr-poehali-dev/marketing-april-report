@@ -208,19 +208,7 @@ export function S7({ active, n, total }: SlideProps) {
         })}
       </div>
 
-      <div style={{ display: "flex", gap: 14 }}>
-        {[
-          { label: "Кликабельность",  value: ctr + "%", sub: "SMS → Клик",     color: C.blue,   glow: "rgba(59,130,246,0.15)" },
-          { label: "Конверсия",        value: cvr + "%", sub: "Клик → Деп",    color: C.teal,   glow: "rgba(20,184,166,0.15)" },
-          { label: "Сквозная ставка",  value: e2e + "%", sub: "SMS → Депозит", color: C.purple, glow: "rgba(139,92,246,0.15)" },
-        ].map(r => (
-          <Glass key={r.label} glow={r.glow} style={{ flex: 1, padding: "20px 22px", textAlign: "center" }}>
-            <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 8 }}>{r.label.toUpperCase()}</div>
-            <div style={{ ...T, fontSize: 44, color: r.color, fontWeight: 700, letterSpacing: -1, lineHeight: 1 }}>{r.value}</div>
-            <div style={{ fontSize: 10, color: C.muted, marginTop: 6 }}>{r.sub}</div>
-          </Glass>
-        ))}
-      </div>
+
     </Shell>
   );
 }
