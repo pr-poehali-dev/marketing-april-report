@@ -105,9 +105,9 @@ export function S10({ active, n, total }: SlideProps) {
 
           <Glass style={{ display: "inline-flex", gap: 40, padding: "22px 40px", background: "rgba(255,255,255,0.02)" }}>
             {[
-              { icon: "✉", l: "Email",    v: "dept@company.com"      },
-              { icon: "⚡", l: "Telegram", v: "@analytics_dept"        },
-              { icon: "◉", l: "Дашборд",  v: "analytics.company.com" },
+              { icon: "✉", l: "Email",    v: "otdel_wa@o3goteam"           },
+              { icon: "⚡", l: "Telegram", v: "@le_cavali_er"             },
+              { icon: "◉", l: "Дашборд",  v: "WaOtdel.dezainebeishiy.GO" },
             ].map(c => (
               <div key={c.l} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: 16, marginBottom: 6 }}>{c.icon}</div>

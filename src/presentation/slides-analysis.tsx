@@ -179,7 +179,7 @@ export function S7({ active, n, total }: SlideProps) {
     <Shell n={n} total={total} note="Сквозная конверсия 0.854%. Цель на май: 1.0% через оптимизацию лендинга.">
       <Label text="Воронка конверсии" />
       <h2 style={{ ...T, fontSize: 36, color: C.white, fontWeight: 500, margin: "0 0 30px", letterSpacing: -0.5 }}>
-        SMS → Клики → Депозиты
+        Воронка конверсии
       </h2>
 
       <div style={{ display: "flex", alignItems: "stretch", gap: 0, marginBottom: 24 }}>
@@ -208,7 +208,12 @@ export function S7({ active, n, total }: SlideProps) {
         })}
       </div>
 
-
+      <div style={{ display: "flex", gap: 14 }}>
+        <Glass style={{ flex: 1, padding: "20px 22px", textAlign: "center", background: "rgba(20,184,166,0.06)", border: "1px solid rgba(20,184,166,0.15)" }}>
+          <div style={{ ...M, fontSize: 8, color: C.dim, letterSpacing: 3, marginBottom: 8 }}>КОНВЕРСИЯ ПО СПАМУ</div>
+          <div style={{ ...T, fontSize: 44, color: C.teal, fontWeight: 700, letterSpacing: -1, lineHeight: 1 }}>2-3%</div>
+        </Glass>
+      </div>
     </Shell>
   );
 }
