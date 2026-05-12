@@ -42,7 +42,7 @@ export const SMS_SPLIT = [
   { label: "Grandpa Check", value: 171668, pct: 34.5, color: C.purple },
   { label: "KakaoTalk",     value: 8581,   pct: 1.7,  color: C.blue   },
   { label: "Botim",         value: 601,    pct: 0.1,  color: C.teal   },
-  { label: "Прочие",        value: 316163, pct: 63.6, color: C.cyan   },
+  { label: "SpamWa",        value: 316163, pct: 63.6, color: C.cyan   },
 ];
 
 export const GEO = [
